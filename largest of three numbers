@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+int main() {
+    int n, sum = 0;
+    
+    printf("Enter a positive integer n: ");
+    scanf("%d", &n);
+    
+    for(int i = 1; i <= n; i++) {
+        sum += (2 * i) - 1;   // adding the ith odd number to the sum
+    }
+    
+    printf("Sum of the first %d odd numbers is %d.\n", n, sum);
+    
+    // verifying the fact that sum = n^2
+    if(sum == n * n)
+        printf("The fact that the sum of the first %d odd numbers is equal to %d has been verified.", n, n * n);
+    else
+        printf("The fact that the sum of the first %d odd numbers is equal to %d has NOT been verified.", n, n * n);
+    
+    return 0;
+}
